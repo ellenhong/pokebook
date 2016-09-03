@@ -33,16 +33,16 @@ dailyUiApp.controller('ImagesController', ["$scope", function($scope) {
    	 evo: 'Kakuna, Beedrill', type: 'app/img/bug.png'},
 	{num: '016', name: 'Pidgey', jap: 'ポッポ', img: 'app/img/016.png',
 	 fast: 'Quick Attack, Tackle', special: 'Twister, Aerial Ace, Air Cutter',
-	 evo: 'Pidgeotto, Pidgeot'},
+	 evo: 'Pidgeotto, Pidgeot', type: 'app/img/flying.png'},
 	{num: '019', name: 'Rattata', jap: 'コラッタ', img: 'app/img/019.png',
 	 fast: 'Tackle, Quick Attack', special: 'Dig, Hyper Fang, Body Slam', 
 	 evo: 'Raticate', type: 'app/img/normal.png'},
 	{num: '023', name: 'Ekans', jap: 'アーボ', img: 'app/img/023.png',
  	 fast: 'Poison Sting, Acid', special: 'Wrap, Sludge Bomb, Gunk Shot',
- 	 evo: 'Arbok'},
+ 	 evo: 'Arbok', type: 'app/img/poison.png'},
 	{num: '025', name: 'Sandshrew', jap: 'サンド', img: 'app/img/025.png',
 	 fast: 'Scratch, Mud Shot', special: 'Dig, Rock Slide, Rock Tomb', 
-	 evo: 'Sandslash'}
+	 evo: 'Sandslash', type: 'app/img/ground.png'}
 	];
 
 	$scope.itemNum = "";

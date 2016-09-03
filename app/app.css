@@ -1,8 +1,7 @@
-/* app css stylesheet */
 body {
   font-family: 'Source Sans Pro';
   font-weight: 200;
-  color: #404040;
+  color: #606060;
 }
 
 #grid-wrapper {
@@ -20,66 +19,9 @@ body {
 
 #line {
   width: 70vw;
-  border-top: 0.5px solid gray;
+  border-top: 0.5px solid #606060;
   margin: 0 auto;
   margin-top: 25px;
-}
-
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
-}
-
-/******** ********/
-
-.header {
-  font-size: 2em;
-  text-align: center;
-  margin-top: 25px;
-  font-family: 'Raleway';
-  color: #494958;
-
-}
-
-.categories {
-  text-align: center;
-  margin-top: 25px;
-  font-size: 0.8em;
-}
-
-.category-button {
-  background: white;
-  border: none;
-  border-bottom: solid 1px lightgray;
-  margin: 0px 15px;
-  padding: 5px 15px;
-  cursor: pointer;
-  opacity: 0.5;
 }
 
 .square-grid {
@@ -116,28 +58,9 @@ body {
   flex-basis: 25%;
 }
 
-@media (max-width: 950px) {
-  .square-grid__cell--7 {
-    flex-basis: 33.333333%;
-  }
-}
-
-@media (max-width: 700px) {
-  .square-grid__cell--7 {
-    flex-basis: 50%;
-  }
-}
-
-@media (max-width: 500px) {
-  .square-grid__cell--7 {
-    flex-basis: 100%;
-  }
-}
-
 .grid-img {
   object-fit: cover;
 }
-
 
 .overlay {
   width: 100%;
@@ -147,7 +70,6 @@ body {
   position: absolute;
   bottom: 0;
 }
-
 
 #full-overlay {
   position: fixed;
@@ -168,8 +90,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   top: 50px;
-  transition: 0.15s;
-  transition-timing-function:  ease, ease-out, linear;
+  transition: 0.2s ease;
 }
 
 #number {
@@ -189,7 +110,6 @@ body {
   width: 325px;
   height: 325px;
   margin: 10px auto;
-  
 }
 
 #fixed-wrapper {
@@ -232,13 +152,30 @@ body {
 .item-header {
   font-weight: 500;
   font-size: 1.25em !important;
+  letter-spacing: 0.05em;
 }
 
 .item-body {
   margin-left: 15px;
 }
 
+@media (max-width: 950px) {
+  .square-grid__cell--7 {
+    flex-basis: 33.333333%;
+  }
+}
 
+@media (max-width: 700px) {
+  .square-grid__cell--7 {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .square-grid__cell--7 {
+    flex-basis: 100%;
+  }
+}
 
 @media (max-width: 900px) {
   #full-img {
