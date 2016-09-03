@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>The Pok&eacute;book</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="app/bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="app/bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app/app.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400|Raleway|Oxygen:300,400,700|Hind" rel="stylesheet">
+
+  <script src="app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+  <div id="title">THE POK&Eacute;BOOK</div>
+  <div id="line"></div>
+  <div id="full-overlay">
+  </div>
+  <div id="fixed-wrapper"></div>
+  <div id="grid-wrapper">
+    <div ng-controller="ImagesController">
+      <div class="square-grid">
+        <div class="square-grid__cell square-grid__cell--7" ng-repeat="item in items" ng-click="select(item)">
+          <div class="square-grid__content">
+            <img class="grid-img" id="{{item.num}}" ng-src={{item.img}}>
+          </div>
+        </div>
+      </div>
+       <div id="card">
+        <img class="type-icon" ng-src={{itemType}}>
+        <div id="number">
+        </div>
+        <div id="full-img">
+        </div>
+        <div class="names">
+          <div class="name-line"></div>
+          <div class="name" ng-bind="itemName"></div>
+          <div class="jap-name" ng-bind="itemJap"></div>
+          <div class="name-line"></div>
+        </div>
+        <div class="info">
+          <div class="item-header">
+            FAST ATTACKS:
+          </div>
+          <div class="item-body fast" ng-bind="itemFast"></div>
+          <div class="item-header">
+            SPECIAL ATTACKS:
+          </div>
+          <div class="item-body special" ng-bind="itemSpecial"></div>
+          <div class="item-header">
+            EVOLVES INTO:
+          </div>
+          <div class="item-body evo" ng-bind="itemEvo"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app/bower_components/angular/angular.js"></script>
+  <script src="app/bower_components/angular-route/angular-route.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/script.js"></script>
+  <script src="app/view1/view1.js"></script>
+  <script src="app/view2/view2.js"></script>
+  <script src="app/components/version/version.js"></script>
+  <script src="app/components/version/version-directive.js"></script>
+  <script src="app/components/version/interpolate-filter.js"></script>
+</body>
+</html>
